@@ -13,7 +13,8 @@ export default function AddButton() {
     const SEVERITY = ["error", "warning", "info", "success"];
 
     const handleAdd = () => {
-        addData("New message", SEVERITY.random());
+        const severity = SEVERITY.random()
+        addData(`This is a ${severity} message!`, severity);
     };
 
     return (
